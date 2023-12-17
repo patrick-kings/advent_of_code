@@ -11,7 +11,7 @@ fn read_crates_from_file() {
 
     let contents = std::fs::read_to_string("aoc_2022/crates.txt").unwrap();
 
-    let cargo: Vec<Stack> = vec![];
+    let _cargo: Vec<Stack> = vec![];
 
     for line in contents.lines() {
         // println!("{}", line);
@@ -22,8 +22,8 @@ fn read_crates_from_file() {
             );
 
             let mut stack1: Vec<String> = vec![];
-            let stack2: Vec<String> = vec![];
-            let stack3: Vec<String> = vec![];
+            let _stack2: Vec<String> = vec![];
+            let _stack3: Vec<String> = vec![];
 
             stack1.push(caps["stack1"].to_owned());
         }
