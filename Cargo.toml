@@ -1,4 +1,4 @@
 [workspace]
 resolver = "2"
 
-members = ["aoc2022", "aoc2023", "lib"]
+members = ["aoc2022", "aoc2023", "aoclib"]

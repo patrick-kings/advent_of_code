@@ -1,21 +1,22 @@
 use regex::Regex;
 
 fn main() {
-    read_calibration_data();
-}
-fn read_calibration_data() {
-    let re = match Regex::new(r"(\d{1})") {
-        Ok(reg) => reg,
+    let contents = match aoclib::lib::read_data("aoc2023/src/day1/calibration.txt") {
+        Ok(contents) => contents,
         Err(err) => {
-            println!("couldn't compile regex, error is: {}", err);
+            println!("{}", err);
             return;
         }
     };
 
-    let contents = match std::fs::read_to_string("aoc2023/src/day1/calibration.txt") {
-        Ok(lines) => lines,
+    get_total(contents);
+}
+
+fn get_total(contents: String) {
+    let re = match Regex::new(r"(\d{1})") {
+        Ok(reg) => reg,
         Err(err) => {
-            println!("error reading calibration data: {}", err);
+            println!("couldn't compile regex, error is: {}", err);
             return;
         }
     };
